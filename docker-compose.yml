@@ -7,9 +7,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: wordpress
-      MYSQL_USER: wpuser
-      MYSQL_PASSWORD: wpsecret
-      MYSQL_ROOT_PASSWORD: rootsecret
+      MYSQL_USER: wpbruker
+      MYSQL_PASSWORD: abc123x
+      MYSQL_ROOT_PASSWORD: abc123x
     volumes:
       - db_data:/var/lib/mysql
 
@@ -23,8 +23,8 @@ services:
       - "8000:80"
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wpuser
-      WORDPRESS_DB_PASSWORD: wpsecret
+      WORDPRESS_DB_USER: wpbruker
+      WORDPRESS_DB_PASSWORD: abc123x
       WORDPRESS_DB_NAME: wordpress
     volumes:
       - ./wp-content:/var/www/html/wp-content
